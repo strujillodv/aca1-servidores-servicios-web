@@ -1,20 +1,10 @@
 <!-- Template Form -->
-<div class="container">
-    <div class="row justify-content-center py-5">
-    <form action="save.php" method="post" class="col-xs-12 col-sm-8">
-      <head>
-        <h2 class="mb-5">Agregar contacto</h2>
-      <?php
-      if (isset($_SESSION['message'])){ ?>
-        <div class="alert alert-<?php echo $_SESSION['message-type'] ?> alert-dismissible fade show" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
-          <use xlink:href="./assets/icons/alerts.svg#<?php echo $_SESSION['message-type'] ?>"/>
-        </svg>
-          <?php echo $_SESSION['message'] ?>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-      <?php session_unset(); } ?>
-      </head>
+<div id="form-contact" class="container-fluid container-form py-5 bg-light">
+  <div class="row justify-content-center container">
+    <form action="save.php" method="post" class="col-xs-12 col-sm-8 pt-5 pt-sm-0">
+      <header>
+        <h2 class="mb-3">Agregar contacto</h2>
+      </header>
       <section class="row " >
         <div class="col-xs-12 col-md-6">
           <div class="mb-3">
@@ -46,8 +36,10 @@
         </div>        
       </section>
       <footer>
+        <input class="btn btn-primary d-none" type="text" name="action" value="save"/>
         <input class="btn btn-primary" type="submit" name="save_contact" value="Guardar"/>
+        <input class="btn btn-ligth mx-3 btn-contact" type="button" name="cancel" value="Cancelar"/>
       </footer>
     </form>
-    </div>
   </div>
+</div>
