@@ -4,7 +4,7 @@
   include('./var.php');
 
   // Connection Database
-  $conection = mysqli_connect(
+  $connection = mysqli_connect(
     $HOSTNAME,
     $USERNAME,
     $PASSWORD,
@@ -12,8 +12,8 @@
     $PORT
   );
 
-  if ($conection->connect_error) {
-    die("La conexión no pudo establecerce: " . $conn->connect_error);
+  if ($connection->connect_error) {
+    die("La conexión no pudo establecerce: " . $connection->connect_error);
   } 
 
 ?>
