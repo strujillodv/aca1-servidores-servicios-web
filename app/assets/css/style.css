@@ -1,0 +1,41 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+.main-container{
+  overflow: hidden;
+}
+
+.avatar-contact {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  line-height: 80px;
+}
+.container-form {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+.container-alert{
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+}
+
+.toggledForm {
+  transform: translateY(0);
+}
+
+.card-no-content {
+  width: 100%;
+  max-width: 500px;
+  padding: 16px;
+}
